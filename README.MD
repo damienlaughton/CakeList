@@ -1,3 +1,47 @@
+What has been done?
+
+* Introduced constraints
+
+The project was quite old and did not take into account notch devices so constraints helped with this.
+
+* Changed cake list to be a uiviewcontroller rather than a uitableviewcontroller
+
+The table in a tableviewcontroller pinned automatically to the superview which was a problem with newer notch devices
+note: to retain the pull to refresh of the original code I had to add this in my UIViewController subclass as it's not
+available in Interface Builder
+
+* Renamed classes to reflect my understanding of the project - e.g. CakeListViewController as opposed to MasterViewController
+
+* Introduced contracts for the view and the view model
+
+The project is now MVVM with a contract for both the view (CakeListViewController) and the View Model (CakeListViewModel)
+
+* Added a mock view and tested the communication between the view model and the view
+
+Tests that the view is called in the correct manner
+
+* Added tests to test the cake model
+
+Testing that a Cake can be instantiated correctly.
+
+* Added mock data for testing
+
+used a copy of the remote data for testing which can be changed as necessary and does not rely on an asynchronous call.
+
+* Fixed initial crash bug
+
+The cell identifier was being referenced incorrectly.
+
+* Added a default cake image for neatness
+
+When images dont load from the given URL instead of a blank square a default icon is shown.
+
+* Constrained the cell height for neatness
+
+Originally the rows of the table were of mixed height and this made the Cake List look too odd for comfort.
+
+--8<--- ORIGINAL TEXT --->8--
+
 Coding Test (fictitious)
 
 
