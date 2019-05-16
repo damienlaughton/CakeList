@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  CakeListViewController.h
 //  Cake List
 //
 //  Created by Stewart Hart on 19/05/2015.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CakeListViewModel.h"
 
-@interface MasterViewController : UITableViewController
+@interface CakeListViewController : UIViewController <CakeListViewDelegate>
+
 
 
 @end

@@ -10,5 +10,15 @@
 
 @implementation CakeCell
 
+- (void)configureWithCake:(Cake *)cake;
+{
+    self.titleLabel.text = cake.cakeName;
+    self.descriptionLabel.text = cake.cakeDescription;
+    if (cake.cakeImage != nil) {
+        self.cakeImageView.image = cake.cakeImage;
+    } else {
+        self.cakeImageView.image = [UIImage imageNamed:@"cake"];
+    }
+}
 
 @end
